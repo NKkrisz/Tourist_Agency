@@ -5,12 +5,12 @@ async function showPlaces() {
 	.then(data => {
         data.forEach(element => {
             let place = document.createElement("div");
-            place.classList.add("flex", "flex-col", "items-center", "place-content-between", 
+            place.classList.add("flex", "flex-col", "items-center",
             "w-1/4", "max-h-60", "p-4", "bg-slate-700", "border", "border-2", "rounded-lg");
             
             const placeName = document.createElement("h2")
             placeName.innerText = element.name;
-            placeName.classList.add("font-bold")
+            placeName.classList.add("font-bold");
             const placeImg = document.createElement("img")
             placeImg.src = element.image;
             placeImg.classList.add("w-32", "h-32");
