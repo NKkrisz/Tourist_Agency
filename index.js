@@ -5,7 +5,8 @@ async function showPlaces() {
 	.then(data => {
         data.forEach(element => {
             let place = document.createElement("div");
-            place.classList.add("flex", "flex-col", "items-center", "place-content-between", "w-1/4", "max-h-60", "p-4", "bg-slate-700", "border", "border-2", "rounded-lg");
+            place.classList.add("flex", "flex-col", "items-center", "place-content-between", 
+            "w-1/4", "max-h-60", "p-4", "bg-slate-700", "border", "border-2", "rounded-lg");
             
             const placeName = document.createElement("h2")
             placeName.innerText = element.name;
@@ -23,14 +24,14 @@ async function showPlaces() {
             place.onclick = () => {
                 infoDialog.innerHTML = "";
                 const closeButton = document.createElement("button");
-                closeButton.classList.add("w-20")
-                closeButton.innerText = "Close";
+                closeButton.classList.add("w-20", "outline-none", "bg-red-600")
+                closeButton.innerText = "X";
                 closeButton.onclick = () => {
                     infoDialog.close();
                 }
                 infoDialog.appendChild(closeButton);
                 infoDialog.showModal();
-                infoDialog.appendChild(document.createElement("h3")).innerText = element.name;
+                infoDialog.appendChild(document.createElement("h3")).innerText = element.name + " | Price:"  + element.price;
                 infoDialog.appendChild(document.createElement("p")).innerText = element.info;
 
             }
