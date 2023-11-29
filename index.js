@@ -33,7 +33,7 @@ async function showPlaces() {
                 infoDialog.appendChild(document.createElement("p")).innerText = element.info;
 
             }
-            console.log(element.name, element.info, element.price, element.image);
+            // console.log(element.name, element.info, element.price, element.image);
             document.querySelector("#container").appendChild(place);
         });
     })
