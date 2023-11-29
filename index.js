@@ -1,6 +1,6 @@
 async function showPlaces() {
     let infoDialog = document.querySelector("#infoDialog");
-    fetch('http://course-api.com/react-tours-project')
+    fetch('https://course-api.com/react-tours-project')
 	.then(response => response.json())
 	.then(data => {
         data.forEach(element => {
