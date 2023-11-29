@@ -24,7 +24,7 @@ async function showPlaces() {
             place.onclick = () => {
                 infoDialog.innerHTML = "";
                 const closeButton = document.createElement("button");
-                closeButton.classList.add("w-20", "outline-none", "bg-red-600")
+                closeButton.classList.add("w-20", "outline-none", "bg-red-600", "rounded", "font-bold", "absolute", "top-0", "right-0")
                 closeButton.innerText = "X";
                 closeButton.onclick = () => {
                     infoDialog.close();
